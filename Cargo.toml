@@ -1,0 +1,18 @@
+[package]
+name = "simd-tree"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+
+[dependencies]
+generational-arena = "0.2.9"
+rand = "0.8.5"
+rayon = "1.7.0"
+
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+overflow-checks = false
